@@ -1,0 +1,25 @@
+{
+    "name": "nc",
+    "displayName": "nc",
+    "description": "nc",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.33.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "nc",
+            "aliases": ["nc", "nc"],
+            "extensions": ["nc"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "nc",
+            "scopeName": "source.nc",
+            "path": "./syntaxes/nc.tmLanguage.json"
+        }]
+    }
+}
