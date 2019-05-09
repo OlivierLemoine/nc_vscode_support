@@ -3,23 +3,44 @@
     "displayName": "nc",
     "description": "nc",
     "version": "0.0.1",
+    "publisher": "OlivierLemoine",
     "engines": {
         "vscode": "^1.33.0"
     },
     "categories": [
         "Programming Languages"
     ],
+    "activationEvents": [
+        "onCommand:extension.helloWorld"
+    ],
+    "main": "./extension.js",
     "contributes": {
-        "languages": [{
-            "id": "nc",
-            "aliases": ["nc", "nc"],
-            "extensions": ["nc"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "nc",
-            "scopeName": "source.nc",
-            "path": "./syntaxes/nc.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "nc",
+                "aliases": [
+                    "nc",
+                    "nc"
+                ],
+                "extensions": [
+                    "nc"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "nc",
+                "scopeName": "source.nc",
+                "path": "./syntaxes/nc.tmLanguage.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "typescript": "^3.3.1",
+        "vscode": "^1.1.28",
+        "eslint": "^5.13.0",
+        "@types/node": "^10.12.21",
+        "@types/mocha": "^2.2.42"
     }
 }
