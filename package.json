@@ -1,7 +1,7 @@
 {
-    "name": "nc",
-    "displayName": "nc",
-    "description": "nc",
+    "name": "nsc",
+    "displayName": "nsc",
+    "description": "nsc",
     "version": "0.0.1",
     "publisher": "OlivierLemoine",
     "engines": {
@@ -11,28 +11,28 @@
         "Programming Languages"
     ],
     "activationEvents": [
-        "onCommand:extension.helloWorld"
+        "onLanguage:nsc"
     ],
     "main": "./extension.js",
     "contributes": {
         "languages": [
             {
-                "id": "nc",
+                "id": "nsc",
                 "aliases": [
-                    "nc",
-                    "nc"
+                    "nsc",
+                    "nsc"
                 ],
                 "extensions": [
-                    "nc"
+                    "nsc"
                 ],
                 "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "nc",
-                "scopeName": "source.nc",
-                "path": "./syntaxes/nc.tmLanguage.json"
+                "language": "nsc",
+                "scopeName": "source.nsc",
+                "path": "./syntaxes/nsc.tmLanguage.json"
             }
         ]
     },

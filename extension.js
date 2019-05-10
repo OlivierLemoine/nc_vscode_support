@@ -9,7 +9,7 @@ const vscode = require('vscode');
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
-    let hover = vscode.languages.registerHoverProvider('nc', {
+    let hover = vscode.languages.registerHoverProvider('nsc', {
         provideHover(document, position, token) {
             console.log('OUI !');
 

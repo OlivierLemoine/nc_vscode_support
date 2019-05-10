@@ -1,6 +1,6 @@
-# nc README
+# nsc README
 
-Syntax highlighting for NC
+Syntax highlighting for NSC
 
 ## Features
 
@@ -8,4 +8,4 @@ Syntax highlighting
 
 ### 0.0.1
 
-Initial release of NC
+Initial release of NSC

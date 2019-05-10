@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-    "name": "nc",
+    "name": "nsc",
     "patterns": [
         {
             "include": "#keywords"
@@ -16,7 +16,7 @@
         "keywords": {
             "patterns": [
                 {
-                    "name": "keyword.control.nc",
+                    "name": "keyword.control.nsc",
                     "match": "(if|else|endif|return|end|call)"
                 },
                 {
@@ -46,16 +46,16 @@
             ]
         },
         "strings": {
-            "name": "string.quoted.double.nc",
+            "name": "string.quoted.double.nsc",
             "begin": "\"",
             "end": "\"",
             "patterns": [
                 {
-                    "name": "constant.character.escape.nc",
+                    "name": "constant.character.escape.nsc",
                     "match": "\\\\."
                 }
             ]
         }
     },
-    "scopeName": "source.nc"
+    "scopeName": "source.nsc"
 }
