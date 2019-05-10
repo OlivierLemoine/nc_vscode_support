@@ -9,14 +9,6 @@ const vscode = require('vscode');
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
-    let hover = vscode.languages.registerHoverProvider('nsc', {
-        provideHover(document, position, token) {
-            return {
-                contents: ['Hover Content'],
-            };
-        },
-    });
-
     let autocomplete = vscode.languages.registerCompletionItemProvider('nsc', {
         provideCompletionItems(document, position, token) {
             let res = [];
@@ -69,7 +61,7 @@ function activate(context) {
         },
     });
 
-    context.subscriptions.push(hover, autocomplete);
+    context.subscriptions.push(autocomplete);
 }
 exports.activate = activate;
 
