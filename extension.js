@@ -20,8 +20,23 @@ function activate(context) {
     let autocomplete = vscode.languages.registerCompletionItemProvider('nsc', {
         provideCompletionItems(document, position, token) {
             let res = [];
-            
-            let f = document.getText().split('\n').slice(0, position.line);
+
+            let f = [];
+            {
+                let pos = position.line;
+                let raw = document.getText().split('\n');
+                let depth = 0;
+                while (pos >= 0) {
+                    let line = raw[pos].trim();
+                    if (line.startsWith('end') || line.startsWith('endif')) {
+                        depth += 1;
+                    } else if (line.startsWith('def') || line.startsWith('if')) {
+                        depth = 0;
+                    }
+                    if (depth <= 0) f.push(line);
+                    pos -= 1;
+                }
+            }
 
             for (let i = 0; i < f.length; i++) {
                 let line = f[i].trim();
@@ -31,12 +46,21 @@ function activate(context) {
                     let snip_txt = '';
                     for (let i = 1; i < args.length; i++) {
                         snip_txt += ' ${' + i.toString() + ':' + args[i] + '}';
+                        res.push({
+                            label: args[i],
+                            kind: 4,
+                        });
                     }
 
                     res.push({
                         label: args[0],
                         kind: 2,
                         insertText: new vscode.SnippetString(`${args[0]}${snip_txt}`),
+                    });
+                } else if (line.startsWith('> ')) {
+                    res.push({
+                        label: line.slice(2),
+                        kind: 5,
                     });
                 }
             }
