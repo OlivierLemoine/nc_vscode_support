@@ -34,6 +34,12 @@
                 "scopeName": "source.nsc",
                 "path": "./syntaxes/nsc.tmLanguage.json"
             }
+        ],
+        "snippets": [
+            {
+                "language": "nsc",
+                "path": "./snippets.json"
+            }
         ]
     },
     "devDependencies": {

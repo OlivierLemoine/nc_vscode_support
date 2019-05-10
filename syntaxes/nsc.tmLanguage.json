@@ -20,7 +20,7 @@
                     "match": "(if|else|endif|return|end|call)"
                 },
                 {
-                    "match": "(def) (\\w+) ([\\w\\W]*)$",
+                    "match": "(def) (\\w+) ?([\\w\\W]*)$",
                     "captures": {
                         "1": { "name": "entity.name.tag" },
                         "2": { "name": "entity.name.function" },
