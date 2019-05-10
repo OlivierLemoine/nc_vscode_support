@@ -1,11 +1,16 @@
 # nsc README
 
-Syntax highlighting for NSC
+NSC
 
 ## Features
 
-Syntax highlighting
+Syntax highlighting and autocomplete
 
-### 0.0.1
+## 0.0.2
 
-Initial release of NSC
+-   Autocomplete variables and functions
+
+## 0.0.1
+
+-   Initial release of NSC
+-   Basic syntax highlighting feature

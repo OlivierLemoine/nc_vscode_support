@@ -2,7 +2,7 @@
     "name": "nsc",
     "displayName": "nsc",
     "description": "nsc",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "OlivierLemoine",
     "engines": {
         "vscode": "^1.33.0"

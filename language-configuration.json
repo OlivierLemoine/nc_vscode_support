@@ -8,5 +8,9 @@
     // symbols that are auto closed when typing
     "autoClosingPairs": [["[", "]"], ["\"", "\""]],
     // symbols that that can be used to surround a selection
-    "surroundingPairs": [["[", "]"], ["\"", "\""]]
+    "surroundingPairs": [["[", "]"], ["\"", "\""]],
+    "indentationRules": {
+        "increaseIndentPattern": "(def|if|else)",
+        "decreaseIndentPattern": "(end|endif|else)"
+    }
 }
